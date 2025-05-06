@@ -1,0 +1,22 @@
+{
+  "name": "testing-with-jest",
+  "version": "1.0.0",
+  "description": "A Jest + npm lab session hi",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inessuhonjic/testing-with-jest.git"
+  },
+  "author": "Ines Suhonjic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inessuhonjic/testing-with-jest/issues"
+  },
+  "homepage": "https://github.com/inessuhonjic/testing-with-jest#readme"
+}
