@@ -137,3 +137,7 @@ out
 
 # dist
 /dist/
+
+#geckodriver
+/geckodriver.exe
+**/geckodriver.exe
