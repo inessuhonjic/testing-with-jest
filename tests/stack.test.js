@@ -31,5 +31,5 @@ test('pop one element in stack', () => {
     stack.push("ett");
     stack.push("två");
     stack.pop();
-    expect(stack.peek()).toBeUndefined();
+    expect(stack.peek()).toBeDefined();
 });
