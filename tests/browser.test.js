@@ -24,7 +24,7 @@ test('The stack should be empty in the beginning', async () => {
     let stack = await driver.findElement(By.id('top_of_stack')).getText();
     expect(stack).toEqual("n/a");
 });
-/*
+
 describe('Clicking "Pusha till stacken"', () => {
     it('should open a prompt box', async () => {
         let push = await driver.findElement(By.id('push'));
@@ -32,39 +32,18 @@ describe('Clicking "Pusha till stacken"', () => {
         let alert = await driver.switchTo().alert();
         await alert.sendKeys("Bananer");
         await alert.accept();
-    });*/
+    });
     //Ines testar
-    it ('vad visas överst i stacken', async () => {
-        //lägg till pannkaka
-        let push = await driver.findElement(By.id('push'));
-        await push.click();
-        let alert = await driver.switchTo().alert();
-        alert.sendKeys("Pannkaka");
-        await alert.accept();
-
-        //lägg till ostkaka
-        let pushTwo = await driver.findElement(By.id('push'));
-        await pushTwo.click();
+    it ('testa att ta bort bananerna', async () => {
+        let popBananer = await driver.findElement(By.id('pop'));
+        await popBananer.click();
         let alertTwo = await driver.switchTo().alert();
-        alertTwo.sendKeys("Ostkaka");
+        let alertText = await alertTwo.getText();
+        expect(alertText).toEqual("Bananer")
         await alertTwo.accept();
-        //ta bort ostkaka
-        let pop = await driver.findElement(By.id('pop'));
-        await pop.click();
-        let popAlert = await driver.switchTo().alert();
-        //let pop_text = await popAlert.getText();
-        //expect(pop_text).toEqual("Tog bort Ostkaka");
-        await popAlert.accept();
 
-        // visa det översta 
-        let top_stack = await driver.findElement(By.id('peek'));
-        await top_stack.click();
-
-        let topStackText = await driver.findElement(By.id('top_of_stack'));
-
-        let topStackTextShow = await topStackText.getText();
-        expect(topStackTextShow).toEqual("Pannkaka");
+        
     })
-//});
+});
 
 
