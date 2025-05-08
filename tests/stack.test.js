@@ -20,9 +20,16 @@ test('peek on stack with two or more elements returns the top element', () => {
 
 //Testa pop-funktionen
 
+test ("testa om listan töms", () => {
+    stack.push("test");
+    stack.empty();
+    expect(stack.peek()).toBeUndefined();
+});
+
+//testa om ett element försvinner och ett är kvar
 test('pop one element in stack', () => {
     stack.push("ett");
-    stack.pop("ett");
-    expect(stack.pop()).toBeUndefined();
-
+    stack.push("två");
+    stack.pop();
+    expect(stack.peek()).toBeUndefined();
 });
