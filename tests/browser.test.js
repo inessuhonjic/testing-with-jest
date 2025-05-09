@@ -39,7 +39,7 @@ describe('Clicking "Pusha till stacken"', () => {
         await popBananer.click();
         let alertTwo = await driver.switchTo().alert();
         let alertText = await alertTwo.getText();
-        expect(alertText).toEqual("Bananer")
+        expect(alertText).toEqual("Tog bort Bananer")
         await alertTwo.accept();
 
         
