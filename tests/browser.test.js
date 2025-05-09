@@ -34,12 +34,12 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
     //Ines testar
-    it ('testa att ta bort bananerna', async () => {
+    it ('should remove Bananer', async () => {
         let popBananer = await driver.findElement(By.id('pop'));
         await popBananer.click();
         let alertTwo = await driver.switchTo().alert();
         let alertText = await alertTwo.getText();
-        expect(alertText).toEqual("Tog bort Bananer")
+        expect(alertText).toEqual("Bananer")
         await alertTwo.accept();
 
         
